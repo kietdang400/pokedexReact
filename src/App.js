@@ -1,7 +1,6 @@
 import React,{useState,useEffect} from "react";
 import Axios from "axios";
 import Form from "./componenets/form";
-import PokemonList from "./componenets/PokemonList";
 import Card from "./componenets/Card";
 function App() {
 
@@ -25,26 +24,79 @@ useEffect(()=>{
 Axios.get(`https://pokeapi.co/api/v2/pokemon/${getPokemon}`).then(response=>{
 setPokemonName(response.data.name);
 setPokemonType(response.data.types[0].type.name);
-setPokemonFront(response.data.sprites.front_default);});
-});
+setPokemonFront(response.data.sprites.front_default);}).catch((err)=>{console.log('error: ' +err);});
+},[getPokemon,pokemonName,pokemonType]);
 
-const[pokeDataURL,setPokeDataURL]=useState("https://pokeapi.co/api/v2/pokemon/");
+
+
+
+
+
+let start=20;
+const[pokeDataURL,setPokeDataURL]=useState(`https://pokeapi.co/api/v2/pokemon?${start}`);
 const[pokeData,setPokeData]=useState('');
+
+
+const[limit,setLimited]=useState(50);
+
+const increaseLimit=()=>{
+  let arrayTest=[];
+let i=21
+
+let newLimit=limit+100;
+ setLimited(newLimit);
+do{
+  i++;
+  arrayTest.push(i);
+  console.log(i);
+}while(i<=limit)
+
+console.log(limit);
+
+/*for(let i=21;i<=limit;start=i++){
+arrayTest.push(i);
+}*/
+const last=arrayTest.pop()
+console.log(last)
+setPokeDataURL(`https://pokeapi.co/api/v2/pokemon?limit=${last}&offset=0`) 
+}
 
 
 
  useEffect(()=>{
-  Axios.get(pokeDataURL).then(response=>{response.data.results.map(pokemon=>{poke(pokemon.url)})})
-},[])
+  Axios.get(pokeDataURL).then(async (response)=>{
+ let pokemonData=await Promise.all(response.data.results.map(async(pokemon)=>{return await poke(pokemon.url)}));
+setPokeData(pokemonData)
+ });
+},[pokeDataURL])
 
-const poke=(url)=>{Axios.get(url).then(response=>
-{setPokeData(state=>{ return [...state, {name:response.data.name, img:response.data.sprites.front_default}]
-})
-})
-}
+ 
+
+
+const poke=async (url)=>{const prom=Axios.get(url).then(response=>
+{
+   let toreturn = 
+          {
+            name: response.data.name,
+            img: response.data.sprites.front_default,
+          }
+        ;
+        // console.log('toreturn: ' + JSON.stringify(toreturn));
+        return toreturn;
+    });
+
+    const toret = await prom;
+    // console.log("toret = " + JSON.stringify(toret));
+    return toret; 
+    
+  };
+
+  
+ 
+
 
 //console.log(pokeData);
-
+//<button onClick={increaseLimit}>Increase</button>
   return (
   <div className="App">
 <Form pokemon={pokemonGet}></Form>
@@ -52,6 +104,8 @@ const poke=(url)=>{Axios.get(url).then(response=>
 <div>{pokemonName} {pokemonType}</div>
 
 <Card data={pokeData}></Card>
+<button onClick={increaseLimit}>Increase</button>
+
     </div>
   );
 }
