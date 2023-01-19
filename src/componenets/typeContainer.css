@@ -1,0 +1,12 @@
+.TypeContainer{
+    border-radius: 10px;
+    width:25%;
+    height:fit-content;
+    margin: 2.5%;
+    font-family: bold;
+    color:rgb(73, 73, 73);
+    text-align: center;
+    display: block;
+        margin-left: auto;
+        margin-right: auto;
+}

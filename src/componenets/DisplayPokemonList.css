@@ -1,0 +1,59 @@
+
+.DisplayPokemonList{
+margin:10% auto;
+border: black;
+overflow: hidden;
+}
+
+
+.scroll-div{
+    overflow-y: scroll;
+    padding: 2%;
+}
+
+
+button{
+   border-radius:10px;
+   padding: 1%;
+   background-color: #ee1515;
+   color: #ffcb05;
+}
+
+/* for-phone-only */
+@media (max-width: 599px) {
+    .DisplayPokemonList {
+        width: 100%;
+    }
+
+        .scroll-div {
+            width: 100%;
+            height: 300px;
+        }
+
+        button {
+            width: 100%;
+            display: block;
+                margin-left: auto;
+                margin-right: auto;
+        }
+}
+
+
+/* for-tablet-portrait-up */
+@media (min-width: 600px) {}
+
+
+/* for-tablet-landscape-up */
+@media (min-width: 900px) {}
+
+
+/* for-desktop-up */
+@media (min-width: 1200px) {}
+
+
+/* for-medium-desktop-up */
+@media (min-width: 1400px) {}
+
+
+/* for-big-desktop-up */
+@media (min-width: 1800px) {}

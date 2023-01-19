@@ -1,0 +1,139 @@
+
+.DisplayPokemon{
+    background-color: rgb(255, 255, 255);
+    height: fit-content;
+    border-radius: 10px;
+ 
+}
+
+.DisplayPokemon img{
+    
+    display: block;
+        margin-left: auto;
+        margin-right: auto;
+        border: 1px solid black;
+        border-bottom-left-radius: 70%;
+        border-bottom-right-radius: 70%;
+        background-color: #2a75bb;
+}
+
+.DisplayPokemon .name{
+    text-align: center;
+    color: #ffcb05;
+    font-weight: bolder;
+}
+
+.weight{
+    margin-left:2%;
+    font-weight: bold;
+    color:rgb(98, 98, 98)
+}
+
+.height{
+    margin-right: 2%;
+    float: right;
+    font-weight: bold;
+    color: rgb(98, 98, 98)
+}
+
+/*Progress Bar*/
+progress {
+    display: block;
+    margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 3%;
+    /* default: inline-block */
+    /*margin: 2em auto;*/
+    padding: 3px;
+    border: 0 none;
+    background: #444;
+    border-radius: 14px;
+}
+
+progress::-moz-progress-bar {
+    border-radius: 12px;
+    background:orange;
+
+}
+
+/* webkit */
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+}
+
+progress::-webkit-progress-bar {
+    background: transparent;
+}
+
+progress#hp::-webkit-progress-value {
+    border-radius: 12px;
+   background: red;
+}
+
+progress#atk::-webkit-progress-value {
+    border-radius: 12px;
+    background: #95f923;
+}
+
+progress#def::-webkit-progress-value {
+    border-radius: 12px;
+    background: #ffcb05;
+}
+progress#spd::-webkit-progress-value {
+    border-radius: 12px;
+    background:#2a75bb;
+}
+
+.label{
+    text-align: center;
+}
+
+#load-stat {
+    margin-top: 5%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* for-phone-only */
+@media (max-width: 599px) {
+.DisplayPokemon {
+    width: 98%;
+}
+
+.DisplayPokemon img {
+width: 70%;
+}
+
+/*Progress Bar*/
+progress {
+    width: 80%;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+    progress {
+        height: 25px;
+    }
+}
+
+}
+
+
+/* for-tablet-portrait-up */
+@media (min-width: 600px) {}
+
+
+/* for-tablet-landscape-up */
+@media (min-width: 900px) {}
+
+
+/* for-desktop-up */
+@media (min-width: 1200px) {}
+
+
+/* for-medium-desktop-up */
+@media (min-width: 1400px) {}
+
+
+/* for-big-desktop-up */
+@media (min-width: 1800px) {}
+

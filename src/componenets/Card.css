@@ -1,5 +1,49 @@
+/* for-phone-only */
+@media (max-width: 599px) {}
+
+
+/* for-tablet-portrait-up */
+@media (min-width: 600px) {}
+
+
+/* for-tablet-landscape-up */
+@media (min-width: 900px) {}
+
+
+/* for-desktop-up */
+@media (min-width: 1200px) {}
+
+
+/* for-medium-desktop-up */
+@media (min-width: 1400px) {}
+
+
+/* for-big-desktop-up */
+@media (min-width: 1800px) {}
+
+
+
+.pokemon{
+    display: grid;
+    grid-template-columns: auto auto;
+grid-gap:25px;
+}
 .card{
     border: 1px solid silver;
-    padding: 1px;
-    
+    border-radius: 10px;
+    margin-bottom: 5%;
+    width: 110%;
+}
+
+.card img{
+display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width:100%;
+}
+
+.card .name{
+    font-weight: bold;
+    text-align: center;
+    padding-bottom: 3%;
 }

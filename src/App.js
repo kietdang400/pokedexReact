@@ -2,7 +2,7 @@ import React,{useState,useEffect} from "react";
 import Axios from "axios";
 import Form from "./componenets/form";
 import DisplayPokemonList from "./componenets/DisplayPokemonList";
-import Card from "./componenets/Card";
+import DisplayPokemon from "./componenets/DisplayPokemon";
 function App() {
 
 const[getPokemon,setGetPokemon]=useState('');
@@ -10,100 +10,72 @@ const[getPokemon,setGetPokemon]=useState('');
 //Data for Display
 const[pokemonName,setPokemonName]=useState('');
 const[pokemonType,setPokemonType]=useState('');
+const[pokemonType2,setPokemonType2]=useState('')
 const[pokemonFront,setPokemonFront]=useState('');
-
+const[pokemonBack,setPokemonBack]=useState('');
+const[hp,setHP]=useState('');
+const[ATK,setATK]=useState('');
+const[def,setdef]=useState('');
+const[spd,setspd]=useState('');
+const[weight,setWeight]=useState('');
+const[height,setHeight]=useState('');
+const[id,setID]=useState('')
 //Data for cards
-const[pokemonCardContent,setPokemonCardContent]=useState([]);
+
 const pokemonGet=(name)=>{
   setGetPokemon(name)
 };
 
 //Form to get pokemon but also a button for the cards to pass in the pokemons name to get the data and put it in display
 
+//display two pokemon types
 useEffect(()=>{
+Axios.get(`https://pokeapi.co/api/v2/pokemon/${getPokemon}`).then(async (response)=>{
 
-Axios.get(`https://pokeapi.co/api/v2/pokemon/${getPokemon}`).then(response=>{
 setPokemonName(response.data.name);
 setPokemonType(response.data.types[0].type.name);
-setPokemonFront(response.data.sprites.front_default);}).catch((err)=>{console.log('error: ' +err);});
+setPokemonType2('');
+//setPokemonType2(response.data.types[1].type.name);
+setHeight(response.data.height)
+setPokemonFront(response.data.sprites.front_default);
+setPokemonBack(response.data.sprites.back_default);
+setHP(response.data.stats[0].base_stat);
+setWeight(response.data.weight);
+setATK(response.data.stats[1].base_stat);
+setdef(response.data.stats[2].base_stat);
+setspd(response.data.stats[5].base_stat);
+setID(response.data.id);
+{response.data.types[1].type.name.length!==0&&setPokemonType2(response.data.types[1].type.name)}
+}).catch((err)=>{console.log('error: ' +err);});
 },[getPokemon,pokemonName,pokemonType]);
 
 
 
 
 
-
-/*let start=20;
-const[pokeDataURL,setPokeDataURL]=useState(`https://pokeapi.co/api/v2/pokemon?${start}`);
-const[pokeData,setPokeData]=useState('');
-
-
-const[limit,setLimited]=useState(50);
-
-const increaseLimit=()=>{
-  let arrayTest=[];
-let i=21
-
-let newLimit=limit+20 ;
- setLimited(newLimit);
-do{
-  i++;
-  arrayTest.push(i);
-  console.log(i);
-}while(i<=limit)
-
-console.log(limit);
-
-/*for(let i=21;i<=limit;start=i++){
-arrayTest.push(i);
-}*/
-/*const last=arrayTest.pop()
-console.log(last)
-setPokeDataURL(`https://pokeapi.co/api/v2/pokemon?limit=${last}&offset=0`) 
+const selectedPokemon=(name)=>{
+  setGetPokemon(name);
 }
-
-
-
- useEffect(()=>{
-  Axios.get(pokeDataURL).then(async (response)=>{
- let pokemonData=await Promise.all(response.data.results.map(async(pokemon)=>{return await poke(pokemon.url)}));
-setPokeData(pokemonData)
- });
-},[pokeDataURL])
-
- 
-
-
-const poke=async (url)=>{const prom=Axios.get(url).then(response=>
-{
-   let toreturn = 
-          {
-            name: response.data.name,
-            img: response.data.sprites.front_default,
-          }
-        ;
-        // console.log('toreturn: ' + JSON.stringify(toreturn));
-        return toreturn;
-    });
-
-    const toret = await prom;
-    // console.log("toret = " + JSON.stringify(toret));
-    return toret; 
-    
-  };*/
-
   
- 
 
-
-//console.log(pokeData);
-//<button onClick={increaseLimit}>Increase</button>
   return (
   <div className="App">
+<h1 style={{textAlign:'center'}}>Pokedex</h1>
 <Form pokemon={pokemonGet}></Form>
-<img src={pokemonFront}></img>
-<div>{pokemonName} {pokemonType}</div>
-<DisplayPokemonList></DisplayPokemonList>
+<DisplayPokemon 
+imgFront={pokemonFront} 
+imgBack={pokemonBack} 
+name={pokemonName} 
+type={pokemonType} 
+type2={pokemonType2}
+hp={hp} 
+ATK={ATK}
+def={def}
+spd={spd}
+weight={weight}
+height={height}>
+</DisplayPokemon>
+<DisplayPokemonList select={selectedPokemon} id={id}></DisplayPokemonList>
     </div>
   );
 }

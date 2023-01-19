@@ -1,6 +1,6 @@
 import React from "react";
 import './Card.css';
-const Card=({ data })=>{
+const Card=({ data, select })=>{
     
 
     //console.log('type of data is: ' + typeof data);
@@ -83,9 +83,9 @@ const Card=({ data })=>{
        
            // console.log("name " + pokemon.name );
             arr.push(
-                <div className="card" style={{backgroundColor:`${backgroundColor}`}} key={Math.floor(Math.random() * 1000000)}> 
+                <div className="card" style={{backgroundColor:`${backgroundColor}`}} onDoubleClick={()=>{select(pokemon.name)}} key={Math.floor(Math.random() * 1000000)}> 
                     <img src={pokemon.img}></img>
-                    <h2>{pokemon.type}</h2>
+                    <div className="name">{pokemon.name}</div>
                 </div>
             );
         }
@@ -95,7 +95,7 @@ const Card=({ data })=>{
 
 ;
     return(
-        <div className="hi">
+        <div className="pokemon">
 
             {createDivs(data)}
             
