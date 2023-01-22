@@ -1,12 +1,51 @@
 .TypeContainer{
     border-radius: 10px;
-    width:25%;
     height:fit-content;
     margin: 2.5%;
     font-family: bold;
     color:rgb(73, 73, 73);
     text-align: center;
     display: block;
-        margin-left: auto;
-        margin-right: auto;
+    margin-left: auto;
+    margin-right: auto;
 }
+
+
+/* for-phone-only */
+@media (max-width: 599px) {
+.TypeContainer {
+width: 25%;
+}
+}
+
+
+/* for-tablet-portrait-up */
+@media (min-width: 600px) {
+    .TypeContainer {
+            width: 40%;
+            padding: 1%;
+            font-size: large;
+        }
+}
+
+
+/* for-tablet-landscape-up */
+@media (min-width: 900px) {
+    .TypeContainer {
+            width: 25%;
+            padding: 1%;
+            font-size: large;
+        }
+}
+
+
+/* for-desktop-up */
+@media (min-width: 1200px) {}
+
+
+/* for-medium-desktop-up */
+@media (min-width: 1400px) {}
+
+
+/* for-big-desktop-up */
+@media (min-width: 1800px) {}

@@ -29,15 +29,45 @@ form #submit{
 
 
 /* for-tablet-portrait-up */
-@media (min-width: 600px) {}
+@media (min-width: 600px) {
+    form input {
+            width: 50%;
+        }
+    
+        form #submit {
+            width: 52.5%;
+        }
+}
 
 
 /* for-tablet-landscape-up */
-@media (min-width: 900px) {}
+@media (min-width: 900px) {
+    form input {
+            width: 45%;
+        }
+    
+        form #submit {
+            width: 37.5%;
+        }
+}
 
 
 /* for-desktop-up */
-@media (min-width: 1200px) {}
+@media (min-width: 1200px) {
+    form input {
+            width: 32%;
+            position:relative;
+            left:-27%;
+        }
+    
+        form #submit {
+            width: 24.5%;
+            position: relative;
+                left: -27%;
+                margin-top: -1%;
+            margin-bottom: 3%;
+        }
+}
 
 
 /* for-medium-desktop-up */

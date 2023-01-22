@@ -1,4 +1,4 @@
-import React,{useState} from "react"
+import React,{useState,useRef} from "react"
 import TypeContainer from "./typeContainer";
 import './DisplayPokemon.css'
 const DisplayPokemon=(props)=>{
@@ -6,6 +6,7 @@ const DisplayPokemon=(props)=>{
 //add bounce effect
 const[showFront,setFront]=useState(true);
 const[toggleBaseStat,setBaseStat]=useState(false)
+
 
 const pokemonImgBack=()=>{
   setFront(false);
@@ -74,6 +75,9 @@ let backgroundColor=''
 
 
 let typeArray=[props.type,props.type2];
+
+const windowWidth = useRef(window.innerWidth);
+
     return(
     <div className="DisplayPokemon">
 <h1 className="name">{props.name}</h1>
@@ -81,8 +85,7 @@ let typeArray=[props.type,props.type2];
 {typeArray.map((type)=>(<TypeContainer type={type}></TypeContainer>))}
 <div><span className='weight'>weight:{props.weight}lbs</span> <span className='height'>height:{props.height*10}cm</span></div>
 
-
-{toggleBaseStat&&
+{toggleBaseStat||windowWidth.current>=1178&&
 <div>
 <h4 className="label">hp</h4>
 <div ><progress id='hp'max="100" value={Math.floor((props.hp/100)*100)}></progress></div>

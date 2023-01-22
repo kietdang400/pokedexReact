@@ -19,7 +19,7 @@
 
 .DisplayPokemon .name{
     text-align: center;
-    color: #ffcb05;
+    color: rgb(35, 35, 35);
     font-weight: bolder;
 }
 
@@ -89,6 +89,7 @@ progress#spd::-webkit-progress-value {
 
 #load-stat {
     margin-top: 5%;
+    padding: 1%;
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -101,8 +102,23 @@ progress#spd::-webkit-progress-value {
 }
 
 .DisplayPokemon img {
-width: 70%;
+width: 50%;
 }
+
+.weight{
+    position:relative;
+    left:-10%;
+    
+}
+.height{
+    position: relative;
+        left: -18%;
+       
+}
+
+ #load-stat {
+     width: 72.5%;
+ }
 
 /*Progress Bar*/
 progress {
@@ -119,15 +135,150 @@ progress {
 
 
 /* for-tablet-portrait-up */
-@media (min-width: 600px) {}
+@media (min-width: 600px) {
+    .DisplayPokemon {
+            width: 88%;
+            position: relative;
+            left: 6%;
+        }
+    
+        .DisplayPokemon img {
+            width: 40%;
+        }
+
+                .weight {
+              font-size: large;
+              position: relative;
+              left: -7%;
+                }
+        
+                .height {
+            font-size: large;
+            position: relative;
+                left: -25%;
+                }
+                #load-stat{
+                    width: 52.5%;
+                }
+                .label{
+                    font-size: large;
+                }
+    
+        /*Progress Bar*/
+        progress {
+            width: 70%;
+        }
+    
+        @media screen and (-webkit-min-device-pixel-ratio:0) {
+            progress {
+                height: 25px;
+            }
+        }
+
+}
 
 
 /* for-tablet-landscape-up */
-@media (min-width: 900px) {}
+@media (min-width: 900px) {
+    .DisplayPokemon {
+            width: 98%;
+            position:relative;
+            left:1%;
+        }
+    
+        .DisplayPokemon img {
+            width: 30%;
+        }
+
+        .weight{
+            position:relative;
+            left:-4%;
+            font-size: x-large;
+        }
+        .height{
+            position: relative;
+                left: -28%;
+                font-size: x-large;
+        }
+        #load-stat{
+            width:45%;
+        }
+
+        .label {
+            font-size: larger;
+        }
+    
+        /*Progress Bar*/
+        progress {
+            width: 60%;
+        }
+    
+        @media screen and (-webkit-min-device-pixel-ratio:0) {
+            progress {
+                height: 25px;
+            }
+        }
+}
 
 
 /* for-desktop-up */
-@media (min-width: 1200px) {}
+@media (min-width: 1200px) {
+    .DisplayPokemon {
+            width: 98%;
+            position: absolute;
+            left: 25%;
+            top:306px;
+        }
+
+    
+        .DisplayPokemon img {
+            width: 20%;
+            padding-left: -100%;
+        }
+    
+        .weight {
+            position: relative;
+            top:-43px;
+            left: -4%;
+            font-size: large;
+            
+        }
+
+    
+        .height {
+            position: relative;
+            top: -65px;
+            left: -35%;
+            font-size: large;
+            margin-top: 2%;
+            
+        }
+    
+        #load-stat {
+          display:none;
+        }
+    
+        .label {
+            font-size: larger;
+            position: relative;
+                top: -115px;
+                margin-top: 3%;
+        }
+    
+        /*Progress Bar*/
+        progress {
+            position: relative;
+            top:-85px;
+            width: 35%;
+            margin-top: -5%;
+        }
+    
+        @media screen and (-webkit-min-device-pixel-ratio:0) {
+            progress {
+                height: 25px;
+            }
+        }
+}
 
 
 /* for-medium-desktop-up */

@@ -51,6 +51,7 @@ const poke=async (url)=>{const prom=Axios.get(url).then(response=>
             name: response.data.name,
             img: response.data.sprites.front_default,
             type:response.data.types[0].type.name,
+            number:response.data.id
           }
         ;
         // console.log('toreturn: ' + JSON.stringify(toreturn));
@@ -78,7 +79,7 @@ return(
             <div className="scroll-object">
                 <Card className={`item${props.id}`} data={pokeData} select={pokemonSelected}></Card>
             </div>
-             <button onClick={increaseLimit}>Load More Pokemon...</button>
+             <button id="load-more" onClick={increaseLimit}>Load More Pokemon...</button>
         </div>
     </div>
 )

@@ -85,6 +85,7 @@ const Card=({ data, select })=>{
             arr.push(
                 <div className="card" style={{backgroundColor:`${backgroundColor}`}} onDoubleClick={()=>{select(pokemon.name)}} key={Math.floor(Math.random() * 1000000)}> 
                     <img src={pokemon.img}></img>
+                    <div className="number">#{pokemon.number}</div>
                     <div className="name">{pokemon.name}</div>
                 </div>
             );

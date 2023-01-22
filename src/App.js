@@ -3,6 +3,7 @@ import Axios from "axios";
 import Form from "./componenets/form";
 import DisplayPokemonList from "./componenets/DisplayPokemonList";
 import DisplayPokemon from "./componenets/DisplayPokemon";
+import './App.css'
 function App() {
 
 const[getPokemon,setGetPokemon]=useState('');
@@ -58,9 +59,10 @@ const selectedPokemon=(name)=>{
 }
   
 
+
   return (
   <div className="App">
-<h1 style={{textAlign:'center'}}>Pokedex</h1>
+<h1 className="Title"style={{textAlign:'center'}}>Pokedex</h1>
 <Form pokemon={pokemonGet}></Form>
 <DisplayPokemon 
 imgFront={pokemonFront} 
