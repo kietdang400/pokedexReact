@@ -82,7 +82,7 @@ button{
     .DisplayPokemonList {
             width: 120%;
             position: absolute;
-            top:27%;
+            top:29%;
             left:-39%;
             /*left: -40%;
             top:-850px;*/
@@ -104,7 +104,30 @@ button{
     
 
 /* for-medium-desktop-up */
-@media (min-width: 1400px) {}
+@media (min-width: 1400px) {
+    .DisplayPokemonList {
+            width: 120%;
+            position: absolute;
+            top: 27%;
+            left: -39%;
+            /*left: -40%;
+                top:-850px;*/
+        }
+    
+        .scroll-div {
+            overflow-y: scroll;
+            width: 100%;
+            height: 860px;
+        }
+    
+        button {
+            width: 20.0%;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 0.5%;
+        }
+}
 
 
 /* for-big-desktop-up */

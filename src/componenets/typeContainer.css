@@ -40,11 +40,27 @@ width: 25%;
 
 
 /* for-desktop-up */
-@media (min-width: 1200px) {}
+@media (min-width: 1200px) {
+    .TypeContainer {
+            width: 15%;
+            padding: 0.5%;
+            margin-top: 0.5%;
+            margin-bottom: 2.5%;
+            font-size: large;
+        }
+}
 
 
 /* for-medium-desktop-up */
-@media (min-width: 1400px) {}
+@media (min-width: 1400px) {
+    .TypeContainer {
+            width: 15%;
+            padding: 0.1%;
+            margin-top: 0.5%;
+            margin-bottom: 2%;
+            font-size: x-large;
+        }
+}
 
 
 /* for-big-desktop-up */
