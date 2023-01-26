@@ -42,7 +42,7 @@ width: 25%;
 /* for-desktop-up */
 @media (min-width: 1200px) {
     .TypeContainer {
-            width: 15%;
+            width: 25%;
             padding: 0.5%;
             margin-top: 0.5%;
             margin-bottom: 2.5%;

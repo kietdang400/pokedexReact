@@ -14,7 +14,9 @@
 
 
 /* for-medium-desktop-up */
-@media (min-width: 1400px) {}
+@media (min-width: 1400px) {.Title {
+    font-size: 350%;
+  }}
 
 
 /* for-big-desktop-up */

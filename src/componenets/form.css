@@ -57,13 +57,13 @@ form #submit{
     form input {
             width: 32%;
             position:relative;
-            left:-27%;
+            left:0%;
         }
     
         form #submit {
-            width: 24.5%;
+            width: 22.5%;
             position: relative;
-                left: -27%;
+                left: 0%;
                 margin-top: -1%;
             margin-bottom: 3%;
         }
@@ -71,7 +71,22 @@ form #submit{
 
 
 /* for-medium-desktop-up */
-@media (min-width: 1400px) {}
+@media (min-width: 1400px) {
+    form input {
+            width: 30%;
+            position: relative;
+            left: 0px;
+        }
+    
+        form #submit {
+            width: 23.5%;
+            position: relative;
+            left: 0%;
+            margin-top: -1%;
+            margin-bottom: 3%;
+            padding:0.75%;
+        }
+}
 
 
 /* for-big-desktop-up */

@@ -236,21 +236,24 @@ progress {
 /* for-desktop-up */
 @media (min-width: 1200px) {
     .DisplayPokemon {
-            width: 98%;
+            width: 49.2%;
             position: absolute;
-            left: 25%;
-            top:306px;
+            left: 50.1%;
+            top:339px;
+            border-top: 2px solid black;
+                border-radius: 0px;
+                background-color: #5cc8b2;
         }
 
     
         .DisplayPokemon img {
-            width: 20%;
+            width: 40%;
             padding-left: -100%;
         }
     
         .weight {
             position: relative;
-            top:-43px;
+            top:-20px;
             left: -4%;
             font-size: large;
             
@@ -259,8 +262,8 @@ progress {
     
         .height {
             position: relative;
-            top: -65px;
-            left: -35%;
+            top: -35px;
+            left: -28%;
             font-size: large;
             margin-top: 2%;
             
@@ -273,15 +276,15 @@ progress {
         .label {
             font-size: larger;
             position: relative;
-                top: -115px;
-                margin-top: 3%;
+                top: -60px;
+                margin-top: 2%;
         }
     
         /*Progress Bar*/
         progress {
             position: relative;
-            top:-85px;
-            width: 35%;
+            top:-55px;
+            width: 50%;
             margin-top: -5%;
         }
     
@@ -296,21 +299,26 @@ progress {
 /* for-medium-desktop-up */
 @media (min-width: 1400px) {
     .DisplayPokemon {
-            width: 98%;
+        height: 127.5%;
+            width: 50%;
             position: absolute;
-            left: 25%;
-            top: 350px;
+            left: 50%;
+            top: 390px;
+            background-color: #5cc8b2;
+            border-top: 2px solid black;
+            border-radius: 0px;
+           
         }
     
     
         .DisplayPokemon img {
-            width: 15%;
+            width: 30%;
             padding-left: -100%;
         }
     
         .weight {
             position: relative;
-            top: -32px;
+            top: -30px;
             left: -4%;
             font-size: large;
     
@@ -319,8 +327,8 @@ progress {
     
         .height {
             position: relative;
-            top: -65px;
-            left: -36.5%;
+            top: -48px;
+            left: -32.5%;
             font-size: large;
             margin-top: 2%;
     
@@ -333,7 +341,7 @@ progress {
         .label {
             font-size: larger;
             position: relative;
-            top: -105px;
+            top: -80px;
             margin-top: 3%;
         }
     
@@ -341,7 +349,7 @@ progress {
         progress {
             position: relative;
             top: -55px;
-            width: 35%;
+            width: 50%;
             margin-top: -5%;
         }
     

@@ -107,13 +107,14 @@ display: block;
 @media (min-width: 1200px) {
     .pokemon {
             grid-gap: 5px;
-            margin-left: 35%;
-            margin-right: 35%;
+            margin-left: 25%;
+            margin-right: 25%;
         }
     
         .card {
-            width: 90%;
-    
+            width: 100%;
+    position: relative;
+    left: 37%;
         }
 
     
@@ -132,7 +133,33 @@ display: block;
 
 
 /* for-medium-desktop-up */
-@media (min-width: 1400px) {}
+@media (min-width: 1400px) {
+    .pokemon {
+            grid-gap: 15px;
+            margin-left: 25%;
+            margin-right: 25%;
+            position: relative;
+            left:-3.75%;
+        }
+    
+        .card {
+            width: 100%;
+    
+        }
+    
+    
+        .card img {
+            width: 75%;
+        }
+    
+        .number {
+            margin-top: -15%;
+        }
+    
+        .card .name {
+            margin-top: -10%;
+        }
+}
 
 
 /* for-big-desktop-up */
