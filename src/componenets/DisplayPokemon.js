@@ -1,6 +1,8 @@
 import React,{useState,useRef} from "react"
 import TypeContainer from "./typeContainer";
-import './DisplayPokemon.css'
+import './DisplayPokemon.css';
+import garadosMouth from "../IMG/pokemon background2.jpg";
+import pokemonBackground4 from "../IMG/pokemon background4.jpg";
 const DisplayPokemon=(props)=>{
 //add pokemon back and hover event
 //add bounce effect

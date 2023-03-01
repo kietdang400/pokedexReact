@@ -58,12 +58,14 @@ form #submit{
             width: 32%;
             position:relative;
             left:0%;
+            top:-115px;
         }
     
         form #submit {
             width: 22.5%;
             position: relative;
                 left: 0%;
+                top:-115px;
                 margin-top: -1%;
             margin-bottom: 3%;
         }

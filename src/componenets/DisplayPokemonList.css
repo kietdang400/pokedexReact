@@ -81,20 +81,23 @@ button{
 @media (min-width: 1200px) {
     .DisplayPokemonList {
             width: 65%;
+            height:127.5%;
             position: absolute;
-            top:29%;
+            top:23%;
             left:-15%;
-            border-top: 2px solid black;
-                border-right: 2px solid black;
-                background-color: #EFFCD5;
+          
+       
+               
+               
             /*left: -40%;
             top:-850px;*/
         }
     
         .scroll-div {
+            position: relative;
             overflow-y: scroll;
             width: 100%;
-            height: 865px;
+            height: 890px;
         }
     
            #load-more {
@@ -105,6 +108,12 @@ button{
             position: relative;
                 left: 8%;
         }
+.background3{
+    position: relative;
+    width:81%;
+    left:7%;
+}
+
     }
     
 
@@ -113,11 +122,8 @@ button{
     .DisplayPokemonList {
             width: 60%;
             position: absolute;
-            top: 27%;
+            top: 23%;
             left: -10%;
-            border-top: 2px solid black;
-            border-right: 2px solid black;
-            background-color: #EFFCD5;
             margin-top: 12%;
             /*left: -40%;
                 top:-850px;*/
@@ -126,7 +132,7 @@ button{
         .scroll-div {
             overflow-y: scroll;
             width: 100%;
-            height: 870px;
+            height: 983px;
         }
     
            #load-more {

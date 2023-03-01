@@ -1,7 +1,8 @@
 import React,{useState,useEffect} from "react";
 import Card from "./Card";
 import Axios from "axios";
-import './DisplayPokemonList.css'
+import './DisplayPokemonList.css';
+
 const DisplayPokemonList=(props)=>{
 
 let start=20;
@@ -75,6 +76,7 @@ props.select(name);
 
 return(
     <div className="DisplayPokemonList">
+      
         <div className="scroll-div">
             <div className="scroll-object">
                 <Card className={`item${props.id}`} data={pokeData} select={pokemonSelected}></Card>

@@ -2,19 +2,40 @@
 .App {
   text-align: center;
   font-family: 'Pokemon Solid', sans-serif;
+  background-image: url('./IMG/pokemon background.jpg')
 }
 
 
 /* for-desktop-up */
 @media (min-width: 1200px) {
+ .App{
+
+
+ }
   .Title {
+    position: relative;
+    top:-5px;
+    left:-2%;
     font-size:300%;
+  }
+
+  .pokedex{
+    position: relative;
+    height: 100px;
+    top:-125px;
+    left:7%;
+    transform: rotate(15deg);
   }
 }
 
 
 /* for-medium-desktop-up */
-@media (min-width: 1400px) {.Title {
+@media (min-width: 1400px) {
+  .App {
+    
+     
+    }
+  .Title {
     font-size: 350%;
   }}
 

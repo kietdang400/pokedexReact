@@ -1,6 +1,6 @@
 
 .DisplayPokemon{
-    background-color: rgb(255, 255, 255);
+    
     height: fit-content;
     border-radius: 10px;
  
@@ -19,21 +19,21 @@
 
 .DisplayPokemon .name{
     text-align: center;
-    color: rgb(35, 35, 35);
+    color: #FFCC00;
     font-weight: bolder;
 }
 
 .weight{
     margin-left:2%;
     font-weight: bold;
-    color:rgb(98, 98, 98)
+    color:#FFCC00;
 }
 
 .height{
     margin-right: 2%;
     float: right;
     font-weight: bold;
-    color: rgb(98, 98, 98)
+    color: #FFCC00;
 }
 
 /*Progress Bar*/
@@ -236,17 +236,17 @@ progress {
 /* for-desktop-up */
 @media (min-width: 1200px) {
     .DisplayPokemon {
-            width: 49.2%;
+            width: 49.93%;
             position: absolute;
             left: 50.1%;
-            top:339px;
-            border-top: 2px solid black;
-                border-radius: 0px;
-                background-color: #5cc8b2;
+            top:310px;
+            border-radius: 0px;
+            background-color: white;
         }
 
     
         .DisplayPokemon img {
+           
             width: 40%;
             padding-left: -100%;
         }
@@ -293,6 +293,22 @@ progress {
                 height: 25px;
             }
         }
+        .DisplayPokemon .mouth{
+            position:relative;
+            left:-38%;
+            border: 0px;
+                border-bottom-left-radius: 0%;
+                border-bottom-right-radius: 0%;
+        }
+        .DisplayPokemon .background4{
+                    position: relative;
+                        left: -43%;
+                        height: 40.83%;
+                        width:23%;
+                        border: 0px;
+                        border-bottom-left-radius: 0%;
+                        border-bottom-right-radius: 0%;
+                }
 }
 
 
@@ -303,9 +319,9 @@ progress {
             width: 50%;
             position: absolute;
             left: 50%;
-            top: 390px;
-            background-color: #5cc8b2;
-            border-top: 2px solid black;
+            top: 434.5px;
+           
+          
             border-radius: 0px;
            
         }
@@ -342,7 +358,8 @@ progress {
             font-size: larger;
             position: relative;
             top: -80px;
-            margin-top: 3%;
+            margin-top: 5%;
+            margin-bottom: 3%;
         }
     
         /*Progress Bar*/
