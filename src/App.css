@@ -2,7 +2,8 @@
 .App {
   text-align: center;
   font-family: 'Pokemon Solid', sans-serif;
-  background-image: url('./IMG/pokemon background.jpg')
+  background-image: url('./IMG/pokemon background.jpg');
+  background-position: 50%;
 }
 
 
