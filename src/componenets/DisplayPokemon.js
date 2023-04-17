@@ -3,6 +3,8 @@ import TypeContainer from "./typeContainer";
 import './DisplayPokemon.css';
 import garadosMouth from "../IMG/pokemon background2.jpg";
 import pokemonBackground4 from "../IMG/pokemon background4.jpg";
+import background from '../IMG/pokemon background.jpg';
+import QuestionMark from '../IMG/Questionmark.png';
 const DisplayPokemon=(props)=>{
 //add pokemon back and hover event
 //add bounce effect
@@ -80,15 +82,28 @@ let typeArray=[props.type,props.type2];
 
 const windowWidth = useRef(window.innerWidth);
 
+const randomPokemon=()=>{
+props.random(Math.floor(Math.random()*1000))
+}
     return(
     <div className="DisplayPokemon">
-<h1 className="name">{props.name}</h1>
-<img src={showFront?props.imgFront:props.imgBack} onMouseEnter={pokemonImgBack} onMouseLeave={pokemonImgFront} style={{backgroundColor:`${backgroundColor}`}}></img>
+<h1 className="name">{props.name!==undefined?props.name:"N/A"}</h1>
+{props.name===undefined?<button onClick={randomPokemon}><img id="questionMark" src={QuestionMark} alt="QuestionMark"></img></button>:<img src={showFront?props.imgFront:props.imgBack} onMouseEnter={pokemonImgBack} onMouseLeave={pokemonImgFront} style={{backgroundColor:`${backgroundColor}`}}></img>}
 {typeArray.map((type)=>(<TypeContainer type={type}></TypeContainer>))}
-<div><span className='weight'>weight:{props.weight}lbs</span> <span className='height'>height:{props.height*10}cm</span></div>
+<div><span className='weight'><u>weight:{props.weight}lbs</u></span> <span className='height'><u>height:{props.height*10}cm</u></span></div>
 
-{toggleBaseStat||windowWidth.current>=1178&&
-<div>
+{window.innerWidth>=1199?
+<div id="baseStat">
+<h4 className="label">hp</h4>
+<div ><progress id='hp'max="100" value={Math.floor((props.hp/100)*100)}></progress></div>
+<h4 className="label">atk</h4>
+<div ><progress id='atk'max="100" value={Math.floor((props.ATK/100)*100)}></progress></div>
+<h4 className="label">def</h4>
+<div ><progress id='def' max="100" value={Math.floor((props.def/100)*100)}></progress></div>
+<h4 className="label">spd</h4>
+<div ><progress max="100" id='spd' value={Math.floor((props.spd/100)*100)}></progress></div>
+</div>:toggleBaseStat&&
+<div id="baseStat">
 <h4 className="label">hp</h4>
 <div ><progress id='hp'max="100" value={Math.floor((props.hp/100)*100)}></progress></div>
 <h4 className="label">atk</h4>
@@ -100,6 +115,8 @@ const windowWidth = useRef(window.innerWidth);
 </div>
 }
 <button id='load-stat'onClick={()=>{setBaseStat(!toggleBaseStat)}}>{toggleBaseStat?<span>Hide Base Stat...</span>:<span>Show Base Stat...</span>}</button>
+
+
 </div>
     )
 }

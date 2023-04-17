@@ -3,7 +3,9 @@
     
     height: fit-content;
     border-radius: 10px;
- 
+    border:2px solid black;
+background-color: #618a3d;
+
 }
 
 .DisplayPokemon img{
@@ -16,6 +18,12 @@
         border-bottom-right-radius: 70%;
         background-color: #2a75bb;
 }
+ #questionMark{
+    background-color: black;
+}
+
+
+
 
 .DisplayPokemon .name{
     text-align: center;
@@ -35,6 +43,7 @@
     font-weight: bold;
     color: #FFCC00;
 }
+
 
 /*Progress Bar*/
 progress {
@@ -85,6 +94,7 @@ progress#spd::-webkit-progress-value {
 
 .label{
     text-align: center;
+    margin-bottom: 3%;
 }
 
 #load-stat {
@@ -99,6 +109,7 @@ progress#spd::-webkit-progress-value {
 @media (max-width: 599px) {
 .DisplayPokemon {
     width: 98%;
+
 }
 
 .DisplayPokemon img {
@@ -129,6 +140,11 @@ width: 50%;
 progress {
     width: 80%;
     margin-top: -9%;
+    
+}
+
+#load-stat {
+    margin-bottom: 3%;
 }
 
 @media screen and (-webkit-min-device-pixel-ratio:0) {
@@ -146,6 +162,7 @@ progress {
             width: 88%;
             position: relative;
             left: 6%;
+            padding-bottom: 3%;
         }
     
         .DisplayPokemon img {
@@ -190,9 +207,11 @@ progress {
 /* for-tablet-landscape-up */
 @media (min-width: 900px) {
     .DisplayPokemon {
-            width: 98%;
+            width: 90%;
+            height: fit-content;
             position:relative;
-            left:1%;
+            left:5%;
+            padding-bottom: 3%;
         }
     
         .DisplayPokemon img {
@@ -211,6 +230,8 @@ progress {
         }
         #load-stat{
             width:45%;
+            margin-bottom: 3%;
+            
         }
 
         .label {
@@ -237,12 +258,13 @@ progress {
 @media (min-width: 1200px) {
     .DisplayPokemon {
             width: 49.93%;
+            height: 143.5%;
             position: absolute;
             left: 50.1%;
-            top:310px;
+            top:440px;
             border-radius: 0px;
-            background-color: white;
-           
+            background-color:#CC0000;
+           border:0px
         }
 
     
@@ -316,11 +338,11 @@ progress {
 /* for-medium-desktop-up */
 @media (min-width: 1400px) {
     .DisplayPokemon {
-        height: 127.5%;
+        height: 120.5%;
             width: 50%;
             position: absolute;
             left: 50%;
-            top: 434.5px;
+            top: 68%;
            
           
             border-radius: 0px;
@@ -380,5 +402,7 @@ progress {
 
 
 /* for-big-desktop-up */
-@media (min-width: 1800px) {}
+@media (min-width: 1800px) {
+
+}
 

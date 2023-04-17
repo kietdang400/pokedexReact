@@ -5,6 +5,7 @@ import DisplayPokemonList from "./componenets/DisplayPokemonList";
 import DisplayPokemon from "./componenets/DisplayPokemon";
 import './App.css';
 import pokedex from './IMG/pokedex.png';
+import QuestionMark from './IMG/Questionmark.png';
 function App() {
 
 const[getPokemon,setGetPokemon]=useState('');
@@ -60,13 +61,15 @@ const selectedPokemon=(name)=>{
 }
   
 
-
+console.log(window.innerWidth)
   return (
   <div className="App">
-<h1 className="Title"style={{textAlign:'center'}}>Pokedex</h1>
+<h1 className="Title"style={{textAlign:'center'}}><u>Pokedex</u></h1>
 <img className="pokedex" src={pokedex} alt="pokdex"></img>
 <Form pokemon={pokemonGet}></Form>
+
 <DisplayPokemon 
+random={selectedPokemon}
 imgFront={pokemonFront} 
 imgBack={pokemonBack} 
 name={pokemonName} 

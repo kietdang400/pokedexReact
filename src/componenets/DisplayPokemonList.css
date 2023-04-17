@@ -2,7 +2,11 @@
 .DisplayPokemonList{
 margin:10% auto;
 border: black;
-overflow: hidden;
+/*overflow: hidden;*/
+overflow-y:auto;
+overflow-x: hidden;
+margin-bottom:-15%;
+
 }
 
 
@@ -80,11 +84,12 @@ button{
 /* for-desktop-up */
 @media (min-width: 1200px) {
     .DisplayPokemonList {
-            width: 65%;
-            height:127.5%;
+            width: 68%;
+            height:150%;
             position: absolute;
-            top:23%;
+            top:47%;
             left:-15%;
+            overflow-y:auto;
            
           background-image: url("../IMG/GrassyField1.jpg"); 
             /*left: -40%;
@@ -120,11 +125,13 @@ button{
     .DisplayPokemonList {
             width: 60%;
             position: absolute;
-            top: 23%;
+            top: 40%;
             left: -10%;
             margin-top: 12%;
             /*left: -40%;
                 top:-850px;*/
+        height:128%;
+      
         }
     
         .scroll-div {
@@ -141,6 +148,7 @@ button{
             padding: 1%;
             position: relative;
             left: 5%;
+            
         }
 }
 

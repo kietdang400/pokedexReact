@@ -2,15 +2,71 @@
 .App {
   text-align: center;
   font-family: 'Pokemon Solid', sans-serif;
-  background-image: url('./IMG/pokemon background.jpg');
-  background-position: 50%;
+  
 }
 
+.Title{
+  color:#FFCB05;
+}
+
+
+@media (max-width: 599px) {
+  .App {
+      background-color: #CC0000;
+    }
+        .pokedex {
+          position: relative;
+          height: 70px;
+          top: -50px;
+          left: 1.5%;
+          transform: rotate(15deg);
+        }
+}
+
+@media (min-width: 600px) {
+.App {
+    background-color: #CC0000;
+  }
+
+  .pokedex {
+    position: relative;
+    height: 70px;
+    top: -50px;
+    left: 1.5%;
+    transform: rotate(15deg);
+  }
+
+  .Title {
+    font-size: 180%;
+  }
+}
+
+@media (min-width: 900px) {
+.App{
+  background-color: #CC0000;
+}
+
+  .pokedex {
+      position: relative;
+      height: 90px;
+      top: -80px;
+      left: 1.5%;
+      transform: rotate(15deg);
+    }
+        .Title {
+          font-size: 300%;
+        }
+
+   
+}
 
 /* for-desktop-up */
 @media (min-width: 1200px) {
  .App{
-
+ 
+background-image: url('./IMG/pokemon background.jpg');
+  background-position: 50%;
+  background-size: 100%
 
  }
   .Title {
@@ -23,8 +79,8 @@
   .pokedex{
     position: relative;
     height: 100px;
-    top:-125px;
-    left:7%;
+    top:-135px;
+    left:8.5%;
     transform: rotate(15deg);
   }
 }

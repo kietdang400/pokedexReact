@@ -16,6 +16,7 @@ const[pokemon,setPokemon]=useState('');
 
     return(
 <div className="form">
+
 <form onSubmit={pokemonForm}>
 <input type="text" placeholder="Enter Pokemon's Name..." onChange={pokemonName} value={pokemon}></input>
 <button id='submit'type='submit'>Submit</button>

@@ -21,7 +21,6 @@ let newLimit=limit+20 ;
 do{
   i++;
   arrayTest.push(i);
-  console.log(i);
 }while(i<=limit)
 
 //console.log(limit);
