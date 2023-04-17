@@ -88,7 +88,7 @@ props.random(Math.floor(Math.random()*1000))
     return(
     <div className="DisplayPokemon">
 <h1 className="name">{props.name!==undefined?props.name:"N/A"}</h1>
-{props.name===undefined?<button onClick={randomPokemon}><img id="questionMark" src={QuestionMark} alt="QuestionMark"></img></button>:<img src={showFront?props.imgFront:props.imgBack} onMouseEnter={pokemonImgBack} onMouseLeave={pokemonImgFront} style={{backgroundColor:`${backgroundColor}`}}></img>}
+{props.name===undefined?<button onClick={randomPokemon} style={{backgroundColor:"transparent", border:"0px"}}><img id="questionMark" src={QuestionMark} alt="QuestionMark"></img></button>:<img src={showFront?props.imgFront:props.imgBack} onMouseEnter={pokemonImgBack} onMouseLeave={pokemonImgFront} style={{backgroundColor:`${backgroundColor}`}}></img>}
 {typeArray.map((type)=>(<TypeContainer type={type}></TypeContainer>))}
 <div><span className='weight'><u>weight:{props.weight}lbs</u></span> <span className='height'><u>height:{props.height*10}cm</u></span></div>
 

@@ -112,6 +112,10 @@ progress#spd::-webkit-progress-value {
 
 }
 
+#questionMark{
+    width:40%;
+}
+
 .DisplayPokemon img {
 width: 50%;
 }
@@ -169,6 +173,10 @@ progress {
             width: 40%;
         }
 
+                #questionMark {
+                    width: 70%;
+                }
+
                 .weight {
               font-size: large;
               position: relative;
@@ -213,6 +221,10 @@ progress {
             left:5%;
             padding-bottom: 3%;
         }
+
+                #questionMark {
+                    width: 80%;
+                }
     
         .DisplayPokemon img {
             width: 25%;
@@ -263,11 +275,14 @@ progress {
             left: 50.1%;
             top:440px;
             border-radius: 0px;
-            background-color:#CC0000;
+            background-image: url("../IMG/final5.jpg");
            border:0px
         }
 
-    
+        #questionMark {
+            width: 100%;
+        }
+
         .DisplayPokemon img {
            
             width: 40%;

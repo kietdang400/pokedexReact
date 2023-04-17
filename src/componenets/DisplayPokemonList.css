@@ -85,13 +85,13 @@ button{
 @media (min-width: 1200px) {
     .DisplayPokemonList {
             width: 68%;
-            height:150%;
+            height:154%;
             position: absolute;
-            top:47%;
+            top:43%;
             left:-15%;
             overflow-y:auto;
            
-          background-image: url("../IMG/GrassyField1.jpg"); 
+          background-image: url("../IMG/pokemon\ background3.jpg"); 
             /*left: -40%;
             top:-850px;*/
         }
