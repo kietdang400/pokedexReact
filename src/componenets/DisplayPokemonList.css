@@ -85,7 +85,7 @@ button{
 @media (min-width: 1200px) {
     .DisplayPokemonList {
             width: 68%;
-            height:154%;
+            height:164.2%;
             position: absolute;
             top:43%;
             left:-15%;
@@ -130,7 +130,7 @@ button{
             margin-top: 12%;
             /*left: -40%;
                 top:-850px;*/
-        height:128%;
+        height:132%;
       
         }
     

@@ -90,7 +90,7 @@ background-image: url('./IMG/pokemon background.jpg');
 @media (min-width: 1400px) {
   .App {
     
-     
+    background-size: 117.5%
     }
   .Title {
     font-size: 350%;
